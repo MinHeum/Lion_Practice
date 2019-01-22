@@ -5,13 +5,26 @@
     <title>WordCount MainPage</title>
 </head>
 <body>
+<div style="text-align:center">
 <h1>이곳에서 단어의 개수를 세어봅시다.</h1>
+<img src="https://images.pexels.com/photos/374918/pexels-photo-374918.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140">
+</div>
+<a onclick="this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';" href="javascript:void(0)">
+사용법 (클릭)
+</a><div style="DISPLAY: none">
+1. 아래 빈 칸에 입력하고싶은 글을 적는다.<br>
+2. Count! 버튼을 누른다.
+</div>
+<br>
+
 <a href="{%url 'about'%}">ABOUT</a>
 
 <form action="{% url 'count' %}"method="GET">
     <textarea cols="100" rows="20" name="fulltext" ,></textarea>
     <br>
-    <input type="submit" value="Count!">
+    <input type="submit" style="WIDTH: 70pt; HEIGHT: 40pt" value="Count!">
 </form>
+<br>
+<a href="https://github.com/QuatreMains"><h3>제작자 github</h3></a>
 </body>
 </html>
