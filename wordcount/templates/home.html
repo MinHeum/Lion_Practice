@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WordCount MainPage</title>
+</head>
+<body>
+<h1>이곳에서 단어의 개수를 세어봅시다.</h1>
+<a href="{%url 'about'%}">ABOUT</a>
+
+<form action="{% url 'count' %}"method="GET">
+    <textarea cols="100" rows="20" name="fulltext" ,></textarea>
+    <br>
+    <input type="submit" value="Count!">
+</form>
+</body>
+</html>
